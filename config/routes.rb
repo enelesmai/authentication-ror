@@ -5,6 +5,8 @@ TestAuthentication::Application.routes.draw do
 
   get "static_pages/about"
 
+  get "static_pages/contact"
+
   get "users/new"
 
   # The priority is based upon order of creation:
@@ -17,6 +19,9 @@ TestAuthentication::Application.routes.draw do
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
+  match '/help' => 'static_pages#help', :as => :help
+  match '/about' => 'static_pages#about', :as => :about
+  match '/contact' => 'static_pages#contact', :as => :contact
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
@@ -56,7 +61,7 @@ TestAuthentication::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'static_pages#home'
 
   # See how all your routes lay out with "rake routes"
 

@@ -23,6 +23,7 @@ end
 
 gem 'jquery-rails'
 gem 'rspec-rails'
+gem 'rspec-support'
 gem 'capybara'
 gem 'webrat'
 
