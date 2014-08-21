@@ -22,6 +22,7 @@ TestAuthentication::Application.routes.draw do
   match '/help' => 'static_pages#help', :as => :help
   match '/about' => 'static_pages#about', :as => :about
   match '/contact' => 'static_pages#contact', :as => :contact
+  match '/signup' => 'users#new', :as => :signup
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
