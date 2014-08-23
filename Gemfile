@@ -6,8 +6,21 @@ gem 'bootstrap-sass'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+group :development, :test do
+	gem 'sqlite3'
+	gem 'rspec-rails'
+	gem 'rspec-support'
+	gem 'factory_girl_rails'
+end
 
+group :test do
+	gem 'capybara'
+end
+
+group :production
+	gem 'pg'
+	gem 'rails_12factor'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -22,11 +35,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'rspec-rails'
-gem 'rspec-support'
-gem 'capybara'
 gem 'webrat'
-gem 'factory_girl_rails'
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
