@@ -34,4 +34,8 @@ TestAuthentication::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+
+  # Speed up tests by lowering bcryipt's cost function
+  #BCrypt::Engine.cost = 8
+  #ActiveModel::SecurePassword.min_cost = true
 end
